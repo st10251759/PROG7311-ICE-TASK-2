@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container text-center mt-5">
+    <div class="card shadow-lg p-5 bg-light border-0">
+        <h1 class="display-4 fw-bold text-primary">Welcome to The Order Processing System</h1>
+        <p class="lead text-secondary">
+            PLace orders with ease. Use of SOLID principles.
+        </p>
+
+        <div class="my-4">
+            <a asp-controller="Order" asp-action="Create" class="btn btn-lg shadow-sm" style="background-color: #FF1493; color: white;">
+                <i class="bi bi-list-check"></i> Create new Order
+            </a>
+        </div>
+
+    </div>
+</div>

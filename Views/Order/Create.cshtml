@@ -1,0 +1,34 @@
+﻿@model PROG7311_OrderProcessingSystem.Models.Order
+
+@{
+    ViewData["Title"] = "Place an Order";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-5" style="background-color: #663399; color: white; border-radius: 15px;">
+        <h2 class="fw-bold text-center">🛒 Place a New Order</h2>
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label asp-for="ProductName" class="form-label fw-bold">Product Name</label>
+                <input asp-for="ProductName" class="form-control" required style="border-radius: 8px;">
+            </div>
+            <div class="mb-3">
+                <label asp-for="CustomerName" class="form-label fw-bold">Customer Name</label>
+                <input asp-for="CustomerName" class="form-control" required style="border-radius: 8px;">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Quantity" class="form-label fw-bold">Quantity</label>
+                <input asp-for="Quantity" type="number" class="form-control" required style="border-radius: 8px;">
+            </div>
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label fw-bold">Price</label>
+                <input asp-for="Price" type="number" step="0.01" class="form-control" required style="border-radius: 8px;">
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-lg text-white" style="background-color: #1E90FF; border-radius: 25px; padding: 10px 25px;">
+                    <i class="bi bi-check-circle"></i> Submit Order
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

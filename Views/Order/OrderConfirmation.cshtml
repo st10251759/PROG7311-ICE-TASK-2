@@ -1,0 +1,18 @@
+﻿@model PROG7311_OrderProcessingSystem.Models.Order
+
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<div class="container mt-5">
+    <div class="card shadow-lg p-5 text-center" style="background-color: #1E90FF; color: white; border-radius: 15px;">
+        <h2 class="fw-bold" style="color: #ffffff;">🎉 Order Placed Successfully! 🎉</h2>
+        <p class="lead" style="color: #f8f9fa;">@ViewBag.Message</p>
+
+        <div class="mt-4">
+            <a asp-action="Create" class="btn btn-lg text-white" style="background-color: #663399; border-radius: 25px; padding: 10px 25px;">
+                <i class="bi bi-arrow-left-circle"></i> Place Another Order
+            </a>
+        </div>
+    </div>
+</div>
