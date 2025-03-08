@@ -3,17 +3,59 @@
 }
 
 <div class="container text-center mt-5">
-    <div class="card shadow-lg p-5 bg-light border-0">
-        <h1 class="display-4 fw-bold text-primary">Welcome to The Order Processing System</h1>
-        <p class="lead text-secondary">
-            PLace orders with ease. Use of SOLID principles.
+    <div class="card shadow-lg p-5 border-0">
+        <h1 class="display-4 fw-bold">Welcome to The Order Processing System</h1>
+        <p class="lead">
+            Place orders with ease. Built using SOLID principles.
         </p>
 
         <div class="my-4">
-            <a asp-controller="Order" asp-action="Create" class="btn btn-lg shadow-sm" style="background-color: #FF1493; color: white;">
-                <i class="bi bi-list-check"></i> Create new Order
+            <a asp-controller="Order" asp-action="Create" class="btn btn-custom shadow-sm">
+                <i class="bi bi-list-check"></i> Create New Order
             </a>
         </div>
-
     </div>
 </div>
+
+<style>
+    /* Homepage Styling */
+    .container {
+        max-width: 800px;
+    }
+
+    .card {
+        background: linear-gradient(to bottom, #003366, #cc0000); /* Blue to Red Gradient */
+        color: white;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+        .card h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #f8f9fa;
+        }
+
+    .btn-custom {
+        background-color: #ffffff;
+        color: #003366;
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .btn-custom:hover {
+            background-color: #cc0000;
+            color: white;
+            transform: scale(1.05);
+        }
+
+</style>
