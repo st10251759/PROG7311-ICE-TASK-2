@@ -4,15 +4,63 @@
     ViewData["Title"] = "Order Confirmation";
 }
 
-<div class="container mt-5">
-    <div class="card shadow-lg p-5 text-center" style="background-color: #1E90FF; color: white; border-radius: 15px;">
-        <h2 class="fw-bold" style="color: #ffffff;">🎉 Order Placed Successfully! 🎉</h2>
-        <p class="lead" style="color: #f8f9fa;">@ViewBag.Message</p>
+<div class="container order-confirmation-container mt-5">
+    <div class="card order-confirmation-card">
+        <h2>🎉 Order Placed Successfully! 🎉</h2>
+        <p>@ViewBag.Message</p>
 
         <div class="mt-4">
-            <a asp-action="Create" class="btn btn-lg text-white" style="background-color: #663399; border-radius: 25px; padding: 10px 25px;">
+            <a asp-action="Create" class="btn return-btn">
                 <i class="bi bi-arrow-left-circle"></i> Place Another Order
             </a>
         </div>
     </div>
 </div>
+
+
+<style>
+    /* Order Confirmation Styling */
+    .order-confirmation-container {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .order-confirmation-card {
+        background: linear-gradient(to bottom, #003366, #cc0000); /* Blue to Red Gradient */
+        color: white;
+        border-radius: 15px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+        .order-confirmation-card h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .order-confirmation-card p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #f8f9fa;
+        }
+
+    .return-btn {
+        background-color: white;
+        color: #003366;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 12px 30px;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+    }
+
+        .return-btn:hover {
+            background-color: #cc0000;
+            color: white;
+            transform: scale(1.05);
+        }
+
+</style>

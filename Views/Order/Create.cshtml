@@ -4,31 +4,86 @@
     ViewData["Title"] = "Place an Order";
 }
 
-<div class="container mt-5">
-    <div class="card shadow-lg p-5" style="background-color: #663399; color: white; border-radius: 15px;">
-        <h2 class="fw-bold text-center">🛒 Place a New Order</h2>
+<div class="container create-order-container mt-5">
+    <div class="card create-order-card">
+        <h2 class="text-center">🛒 Place a New Order</h2>
         <form asp-action="Create" method="post">
             <div class="mb-3">
-                <label asp-for="ProductName" class="form-label fw-bold">Product Name</label>
-                <input asp-for="ProductName" class="form-control" required style="border-radius: 8px;">
+                <label asp-for="ProductName" class="form-label">Product Name</label>
+                <input asp-for="ProductName" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label asp-for="CustomerName" class="form-label fw-bold">Customer Name</label>
-                <input asp-for="CustomerName" class="form-control" required style="border-radius: 8px;">
+                <label asp-for="CustomerName" class="form-label">Customer Name</label>
+                <input asp-for="CustomerName" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label asp-for="Quantity" class="form-label fw-bold">Quantity</label>
-                <input asp-for="Quantity" type="number" class="form-control" required style="border-radius: 8px;">
+                <label asp-for="Quantity" class="form-label">Quantity</label>
+                <input asp-for="Quantity" type="number" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label asp-for="Price" class="form-label fw-bold">Price</label>
-                <input asp-for="Price" type="number" step="0.01" class="form-control" required style="border-radius: 8px;">
+                <label asp-for="Price" class="form-label">Price</label>
+                <input asp-for="Price" type="number" step="0.01" class="form-control" required>
             </div>
             <div class="text-center mt-4">
-                <button type="submit" class="btn btn-lg text-white" style="background-color: #1E90FF; border-radius: 25px; padding: 10px 25px;">
+                <button type="submit" class="btn submit-btn">
                     <i class="bi bi-check-circle"></i> Submit Order
                 </button>
             </div>
         </form>
     </div>
 </div>
+
+<style>
+    /* Create Order Page Styling */
+    .create-order-container {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .create-order-card {
+        background: linear-gradient(to bottom, #003366, #cc0000); /* Blue to Red Gradient */
+        color: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+        .create-order-card h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+    .form-label {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        border: 2px solid white;
+        padding: 10px;
+    }
+
+        .form-control:focus {
+            border-color: #ffcc00;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+        }
+
+    .submit-btn {
+        background-color: #ffffff;
+        color: #003366;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 12px 30px;
+        border-radius: 25px;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .submit-btn:hover {
+            background-color: #cc0000;
+            color: white;
+            transform: scale(1.05);
+        }
+
+</style>
